@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My News App</string>
+
+
+        <!-- Default text to show with the earthquake location ("Near the Pacific-Antarctic Ridge")
+     if no specific kilometer distance from the primary location is given [CHAR LIMIT=30] -->
+        <string name="no_date">Date unavailable</string>
+
+        <!-- Text to display in the list when there are no news items [CHAR LIMIT=NONE] -->
+        <string name="no_news">No news to share today.</string>
+
+        <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+        <string name="no_internet_connection">No internet connection.</string>
+</resources>
