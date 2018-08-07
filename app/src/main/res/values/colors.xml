@@ -22,4 +22,15 @@
 
     <!-- Text color for the News item title in the list item -->
     <color name="textColorAuthor">#2B3D4D</color>
+
+
+    <!-- Primary color of the app (shown in the app bar) -->
+    <color name="primary_color">#4A312A</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color">#2F1D1A</color>
+
+    <!-- Background color for app -->
+    <color name="tan_background">#FFF7DA</color>
+
 </resources>

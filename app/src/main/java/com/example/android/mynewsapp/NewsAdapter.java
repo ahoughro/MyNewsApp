@@ -20,7 +20,6 @@ public class NewsAdapter extends ArrayAdapter<News> {
     //Variable defined for use in string manipulation for the extraction of the date from the time.
     private static final String LOCATION_SEPARATOR = "T";
 
-
     /** Tag for the log messages */
     public static final String LOG_TAG = NewsAdapter.class.getName();
 
@@ -46,33 +45,22 @@ public class NewsAdapter extends ArrayAdapter<News> {
         //Find the news at the given position in the list of news stories
         News currentNews = getItem(position);
 
-        Log.i(LOG_TAG, "In NewsAdapter at: " + position);
-
-
         //Find the textview in the news_list_item layout with the ID newsTitle
         TextView newsTitleTextView = (TextView) listItemView.findViewById(R.id.newsTitle);
         newsTitleTextView.setText(currentNews.getNewsTitle());
-       // Log.i(LOG_TAG, "MyClass.getView() — get item number " + position);
 
-        //Create 2 location strings from the location string and check if there is an offset.
-
+        //Create a split string from the newsTitle string and parse to cut out the T______.
         String originalDate = currentNews.getNewsDate();
         String webPublicationDate;
-        //String webPublicationTime;
-
 
         if (originalDate.contains(LOCATION_SEPARATOR)) {
             String[] parts = originalDate.split(LOCATION_SEPARATOR);
-            webPublicationDate = parts[0] + LOCATION_SEPARATOR;
-          //  webPublicationTime = parts[1];
+            webPublicationDate = parts[0];
         } else {
             webPublicationDate = getContext().getString(R.string.no_date);
-           // webPublicationTime = originalDate;
         }
 
-        Log.i(LOG_TAG, "In NewsAdapter at: " + webPublicationDate);
-
-        //Display the webPublicationDate only in the TextView
+        //Display the webPublicationDate in the TextView
         TextView primaryDateView = (TextView) listItemView.findViewById(R.id.date);
         primaryDateView.setText(webPublicationDate);
 

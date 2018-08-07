@@ -50,7 +50,6 @@ public final class QueryUtils {
         if (TextUtils.isEmpty(newsJSON)) {
             return null;
         }
-
         // Create an empty ArrayList that we can start adding news stories to
         ArrayList<News> newsStory = new ArrayList<>();
 
@@ -62,7 +61,7 @@ public final class QueryUtils {
             JSONObject baseJsonResponse = new JSONObject(newsJSON);
 
         /**
-         * Get the JSON Response Object with all the things
+         * Get the JSON Response Object with all the things to serve as the root.
          * The Results array and the Fields object have duplicate entries.  The Results array includes the
          * news Section, but not the author, while author is in the Fields object.
          */
@@ -92,12 +91,12 @@ public final class QueryUtils {
                 // Extract the value for the key called "webTitle"
                 String newsTitle = currentNews.getString("webTitle");
 
-                // Extract the value for the key called "section"
-                if (currentNews.has("section")){
-                    section = currentNews.getString("section");
+                // Extract the value for the key called "sectionName" and ensure it exists
+                if (currentNews.has("sectionName")){
+                    section = currentNews.getString("sectionName");
                 }
 
-                // Credit for helping me with code goes to Charles Rowland
+                // Credit for helping me with this portion of code goes to Charles Rowland
                 if (fields.has("byline")){
                 author = fields.getString("byline");
                 }
@@ -106,14 +105,11 @@ public final class QueryUtils {
                 String date = currentNews.getString("webPublicationDate");
 
                 // Extract the value for the key called "url"
-                String url = currentNews.getString("webURL");
-
+                String url = currentNews.getString("webUrl");
 
                 // Create a new {@link News} object with the newsTitle, section, author, date,
                 // and url from the JSON response.
                 News news = new News(newsTitle, section, author, date, url);
-
-                Log.i(LOG_TAG, "In query utils NewsTitle: " + newsTitle);
 
                 //add the new {@link news} to the list of news stories
                 newsStory.add(news);
@@ -209,7 +205,7 @@ public final class QueryUtils {
      */
     public static List<News> fetchNewsData(String requestUrl) {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -8,7 +8,6 @@
     android:paddingRight="16dp"
     android:paddingStart="16dp">
 
-
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -19,7 +18,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/newsTitle"
+            android:id="@+id/newsSection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -27,18 +26,27 @@
             android:maxLines="1"
             android:textAllCaps="true"
             android:textColor="@color/textColorNewsTitle"
-            android:textSize="12sp"
-            tools:text="30km S of" />
+            android:textSize="15sp"
+            tools:text="Section" />
 
         <TextView
-            android:id="@+id/newsSection"
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorAuthor"
+            android:textSize="12sp"
+            tools:text="Author" />
+
+        <TextView
+            android:id="@+id/newsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
             android:textColor="@color/textColorNewsSection"
-            android:textSize="16sp"
-            tools:text="Long placeholder location that should wrap to more than 2 lines of text" />
+            android:textSize="20sp"
+            tools:text="Long placeholder location that should wrap to more
+            than 2 lines of text" />
 
     </LinearLayout>
 
@@ -57,16 +65,7 @@
             android:layout_gravity="end"
             android:textColor="@color/textColorDate"
             android:textSize="12sp"
-            tools:text="Mar 6, 2010"/>
-
-        <TextView
-            android:id="@+id/author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:textColor="@color/textColorAuthor"
-            android:textSize="12sp"
-            tools:text="Author" />
+            tools:text="2010-08-01"/>
 
     </LinearLayout>
 </LinearLayout>

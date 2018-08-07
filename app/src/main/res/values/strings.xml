@@ -1,14 +1,53 @@
 <resources>
     <string name="app_name">My News App</string>
 
-
-        <!-- Default text to show with the earthquake location ("Near the Pacific-Antarctic Ridge")
-     if no specific kilometer distance from the primary location is given [CHAR LIMIT=30] -->
-        <string name="no_date">Date unavailable</string>
+        <!-- Default text to show with the news app missing a date [CHAR LIMIT=30] -->
+        <string name="no_date">Date Unavailable</string>
 
         <!-- Text to display in the list when there are no news items [CHAR LIMIT=NONE] -->
         <string name="no_news">No news to share today.</string>
 
         <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
-        <string name="no_internet_connection">No internet connection.</string>
+        <string name="no_internet_connection">No Internet Connection.</string>
+
+
+    <!-- Text for User Preferences -->
+    <string name="settings_menu_item">Settings</string>
+
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">News Settings</string>
+
+<!-- User Editable field for page item-->
+    <string name="settings_page_label">Page</string>
+    <string name="settings_page_key" translatable="false">page</string>
+    <string name="settings_page_default" translatable="false">1</string>
+
+
+    <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_page_value</string>
+    <string name="settings_order_by_time_default" translatable="false">@string/settings_order_by_time_value</string>
+
+
+    <!-- Label for order-by page option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_page_label">Page</string>
+    <string name="settings_order_by_page_value" translatable="false">page</string>
+
+    <!-- Label for order-by most recent option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_most_recent_label">Most Recent</string>
+    <string name="settings_order_by_most_recent_value" translatable="false">most_recent</string>
+
+    <!-- Label for order-by time option -->
+    <string name="settings_order_by_time_value" translatable="false">time</string>
+    <string name="settings_order_by_newest_label" translatable="false">newest</string>
+    <string name="settings_order_by_oldest_label" translatable="false">oldest</string>
+    <string name="settings_order_by_relevance_label" translatable="false">relevance</string>
+
+    <string name="settings_order_by_newest_value" translatable="false">newest</string>
+    <string name="settings_order_by_oldest_value" translatable="false">oldest</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+
+
+
 </resources>
