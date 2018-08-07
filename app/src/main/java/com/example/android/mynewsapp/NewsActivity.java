@@ -158,15 +158,12 @@ public class NewsActivity extends AppCompatActivity implements LoaderCallbacks<L
                 getString(R.string.settings_page_key),
                 getString(R.string.settings_page_default));
 
-       //String orderBy  = sharedPrefs.getString(
-        //       getString(R.string.settings_order_by_key),
-        //       getString(R.string.settings_order_by_default));
+       String orderBy  = sharedPrefs.getString(
+              getString(R.string.settings_order_by_key),
+              getString(R.string.settings_order_by_default));
 
-        String orderByTime = sharedPrefs.getString(
-                getString(R.string.settings_order_by_time_value),
-                getString(R.string.settings_order_by_time_default));
 
-        Log.i(LOG_TAG, "This is the string we built for TIME:" + orderByTime);
+        Log.i(LOG_TAG, "This is the string we built for ORDERBY:" + orderBy);
         // parse breaks apart the URI string that's passed into its parameter
         Uri baseUri = Uri.parse(GUARDIAN_REQUEST_URL);
 
@@ -176,7 +173,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderCallbacks<L
         // Append query parameter and its value. For example, the `order-by=newest`
         uriBuilder.appendQueryParameter("page", page); //pass in the option a user picked for the page
         uriBuilder.appendQueryParameter("q", "art"); //this is what I set it to be
-        uriBuilder.appendQueryParameter("order-by", orderByTime);
+        uriBuilder.appendQueryParameter("order-by", orderBy);
         uriBuilder.appendQueryParameter("api-key","d68b6411-edc7-4fec-908a-ab8516493860"); //my key
 
 
